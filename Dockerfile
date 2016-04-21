@@ -8,4 +8,4 @@ RUN apk add --update --no-cache build-base python-dev py-pip && \
 
 EXPOSE 1080 1025
 
-ENTRYPOINT [ "maildump", "-fn", "--db", "/maildump.db" ]
+ENTRYPOINT [ "maildump", "-fn", "--db", "/maildump.db", "--smtp-ip", "0.0.0.0", "--http-ip", "0.0.0.0" ]
